@@ -1,0 +1,474 @@
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-yellow: #f5ac43;
+    --color-red: #e83636;
+    --color-blue: #2d73b9;
+    --color-grey: #4e4e4e;
+    --font-aeonik: 'Aeonik', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+}
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--font-inter);
+    background: var(--color-white);
+    color: var(--color-black);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.a 
+{
+    text-decoration: none;
+    
+}
+
+.bold {
+    font-weight: 700;
+}
+.bold-hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+.orange-text { color: var(--color-black); font-weight: 700; }
+.yellow-text { color: var(--color-yellow); font-weight: 700; }
+.red-text { color: var(--color-red); font-weight: 700; }
+.blue-text { color: var(--color-blue); font-weight: 700; }
+.underline-yellow { text-decoration: underline; color: var(--color-yellow); }
+.underline-red { text-decoration: underline; color: var(--color-red); }
+.underline-blue { text-decoration: underline; color: var(--color-blue); }
+
+/* Header and Navigation */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.logo-image {
+    width: 200px;
+    margin-left: 10%;
+}
+
+.logo-year {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 16px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-menu a {
+    color: var(--color-black);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a.active {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    text-align: left;
+}
+
+.hero-text {
+
+
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.location-details {
+    text-align: left;
+}
+
+.location-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.location-address {
+    font-size: 1.25rem;
+    text-decoration: underline;
+    color: var(--color-black);
+}
+
+.location-icon {
+    display: none; /* Hide icon on mobile for cleaner look */
+}
+
+/* About Section */
+.about-section {
+    margin-left: 8%;
+    margin-right: 8%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.about-image-container {
+    width: 100%;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    font-family: var(--font-aeonik);
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Event Sections */
+.event-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+        margin-left: 10%;
+                margin-right: 10%;
+    }
+     
+
+.event-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.event-time {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.event-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--font-aeonik);
+}
+
+.event-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.event-description p {
+    font-size: 1rem;
+}
+
+.speakers-list, .workshops-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.speaker-card, .workshop-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.speaker-card.reversed, .workshop-card.reversed {
+    flex-direction: column-reverse;
+}
+
+.speaker-content, .workshop-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.speaker-name, .workshop-name {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-aeonik);
+}
+
+.speaker-bio {
+    font-size: 1rem;
+}
+
+.workshop-subtitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-grey);
+}
+
+.workshop-description {
+    font-size: 1rem;
+}
+
+.speaker-tags, .workshop-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tag {
+    padding: 8px 16px;
+    border: 1px solid var(--color-black);
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.speaker-image, .workshop-image {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Sponsors Section */
+.sponsors {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+.sponsor-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sponsor-heading {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sponsor-logos img {
+    max-width: 100%;
+    height: 100%;
+}
+
+/* MEDIA QUERIES for larger screens */
+
+@media (min-width: 768px) {
+    .container {
+        padding: 40px;
+        gap: 100px;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .logo-group {
+        align-items: flex-end;
+    }
+    
+    .logo-year {
+        text-align: right;
+    }
+
+    .hero-section {
+        align-items: flex-end;
+        text-align: right;
+        gap: 48px;
+    }
+
+    .hero-text {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    .location {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .location-details {
+        text-align: right;
+    }
+
+    .location-name, .location-address {
+        font-size: 1.5rem;
+    }
+    
+    .location-icon {
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .icon-fill {
+        width: 26.25px;
+        height: 35px;
+        position: absolute;
+        left: 4.38px;
+        top: 0;
+        background: #212529;
+    }
+
+    .about-section {
+        flex-direction: row;
+        gap: 48px;
+        justify-content: center;
+    }
+
+    .about-image-container {
+        flex: 1;
+    }
+    
+    .about-content {
+        flex: 1;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .about-text {
+        font-size: 1.25rem;
+    }
+
+    .event-description {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 48px;
+    }
+
+    .event-description p {
+        flex: 1;
+        font-size: 1.25rem;
+    }
+
+    .speaker-card, .workshop-card {
+        flex-direction: row;
+        gap: 48px;
+        text-align: left;
+
+       
+
+    }
+    
+    .speaker-card.reversed, .workshop-card.reversed {
+        flex-direction: row-reverse;
+        
+    }
+
+    .speaker-content, .workshop-content {
+        
+        align-items: flex-start;
+        text-align: left;
+        flex: 1;
+    }
+
+    .speaker-tags, .workshop-tags {
+        justify-content: flex-start;
+    }
+
+    .sponsors {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .sponsor-group {
+        text-align: center;
+    }
+}
