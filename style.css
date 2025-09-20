@@ -35,7 +35,7 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 160px;
 }
 
 img {
@@ -79,18 +79,19 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    margin-bottom: 80px;
 }
 
 .logo-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 8px;
     text-align: center;
 }
 
 .logo-image {
-    width: 200px;
+    width: 500px;
     margin-left: 10%;
 }
 
@@ -508,7 +509,7 @@ img {
     display: flex;
     gap: 60px;
     width: max-content;
-    animation: scroll 30s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 
