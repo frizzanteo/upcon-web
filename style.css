@@ -84,7 +84,7 @@ img {
 
 .logo-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 8px;
     text-align: center;
@@ -349,6 +349,18 @@ img {
 
 /* MEDIA QUERIES for larger screens */
 
+@media (max-width: 768px) {
+
+        .header {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0px;
+
+    }
+}
+
+
 @media (min-width: 768px) {
     .container {
         padding: 40px;
@@ -359,6 +371,7 @@ img {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 0px;
     }
 
     .nav-menu {
@@ -509,7 +522,7 @@ img {
     display: flex;
     gap: 60px;
     width: max-content;
-    animation: scroll 15s linear infinite;
+    animation: scroll 20s linear infinite;
 }
 
 
