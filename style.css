@@ -92,7 +92,8 @@ img {
 
 .logo-image {
     width: 500px;
-    margin-left: 10%;
+    margin-left: 
+    0%;
 }
 
 .logo-year {
@@ -495,7 +496,7 @@ img {
     }
 }
 
-@media (min-width: 430px) {
+@media (max-width: 900px) {
     .container {
         padding: 40px;
         gap: 20px;
@@ -522,7 +523,7 @@ img {
     display: flex;
     gap: 60px;
     width: max-content;
-    animation: scroll 20s linear infinite;
+    animation: scroll 25s linear infinite;
 }
 
 
