@@ -311,10 +311,18 @@ img {
     font-size: 0.8rem;
 }
 
-.speaker-image, .workshop-image {
+.speaker-image{
     width: 100%;
     max-width: 350px;
+  
 }
+
+.workshop-image {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 25px;
+}
+
 
 /* Sponsors Section */
 .sponsors {
