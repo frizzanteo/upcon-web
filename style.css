@@ -520,7 +520,7 @@ p {
 
 /* Sezione sponsor con scorrimento orizzontale */
 .sponsors {
-    background: #ffffff;
+    background: #fff;
     padding: 40px 0;
     overflow: hidden;
     position: relative;
