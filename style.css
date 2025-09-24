@@ -82,6 +82,12 @@ img {
     margin-bottom: 80px;
 }
 
+p {
+
+    font-size: 1.3rem;
+}
+
+
 .logo-group {
     display: flex;
     flex-direction: column;
@@ -283,7 +289,7 @@ img {
 }
 
 .speaker-bio {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .workshop-subtitle {
@@ -308,7 +314,7 @@ img {
     border: 1px solid var(--color-black);
     border-radius: 25px;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .speaker-image{
@@ -459,7 +465,7 @@ img {
     .event-description {
         flex-direction: row;
         justify-content: space-between;
-        gap: 48px;
+        gap: 80px;
     }
 
     .event-description p {
@@ -514,7 +520,7 @@ img {
 
 /* Sezione sponsor con scorrimento orizzontale */
 .sponsors {
-    background: #f8f8f8;
+    background: #ffffff;
     padding: 40px 0;
     overflow: hidden;
     position: relative;
