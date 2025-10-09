@@ -329,6 +329,13 @@ p {
     border-radius: 25px;
 }
 
+
+.event-image {
+    max-height: 350px;
+    border-radius: 25px;
+}
+
+
 /* Sponsors Section */
 .sponsors {
     display: flex;
