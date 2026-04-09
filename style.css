@@ -29,13 +29,27 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
+main {
     display: flex;
     flex-direction: column;
-    gap: 160px;
+    gap: 100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
 }
 
 img {
@@ -49,11 +63,7 @@ img {
     border-radius: 25px;
 }
 
-.a 
-{
-    text-decoration: none;
-    
-}
+
 
 .bold {
     font-weight: 1000;
@@ -187,13 +197,11 @@ p {
 
 /* About Section */
 .about-section {
-    margin-left: 8%;
-    margin-right: 8%;
-
     display: flex;
     flex-direction: column;
     gap: 32px;
     align-items: center;
+    width: 100%;
 }
 
 .about-image-container {
@@ -223,9 +231,8 @@ p {
     display: flex;
     flex-direction: column;
     gap: 32px;
-        margin-left: 10%;
-                margin-right: 10%;
-    }
+    width: 100%;
+}
      
 
 .event-header {
@@ -255,13 +262,20 @@ p {
     font-size: 1rem;
 }
 
-.speakers-list, .workshops-list {
+.speakers-list {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.speaker-card, .workshop-card {
+.workshops-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+    width: 100%;
+}
+
+.speaker-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -269,17 +283,42 @@ p {
     text-align: center;
 }
 
+.workshop-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workshop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
 .speaker-card.reversed, .workshop-card.reversed {
     flex-direction: column-reverse;
 }
 
-.speaker-content, .workshop-content {
+.speaker-content {
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: center;
     text-align: center;
+}
 
+.workshop-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
 }
 
 .speaker-name, .workshop-name {
@@ -320,19 +359,23 @@ p {
 .speaker-image{
     width: 100%;
     max-width: 350px;
-  
 }
 
 .workshop-image {
     width: 100%;
-    max-width: 350px;
-    border-radius: 25px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #eee;
 }
 
 
 .event-image {
-    max-height: 350px;
-    border-radius: 25px;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 16px;
 }
 
 
@@ -384,8 +427,8 @@ p {
 
 @media (min-width: 768px) {
     .container {
-        padding: 40px;
-        gap: 100px;
+        padding: 60px 40px;
+        gap: 120px;
     }
 
     .header {
@@ -472,36 +515,33 @@ p {
     .event-description {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         gap: 80px;
     }
 
-    .event-description p {
+    .event-description p,
+    .event-description > div {
         flex: 1;
         font-size: 1.25rem;
     }
 
-    .speaker-card, .workshop-card {
+    .speaker-card {
         flex-direction: row;
         gap: 48px;
         text-align: left;
-
-       
-
     }
     
-    .speaker-card.reversed, .workshop-card.reversed {
+    .speaker-card.reversed {
         flex-direction: row-reverse;
-        
     }
 
-    .speaker-content, .workshop-content {
-        
+    .speaker-content {
         align-items: flex-start;
         text-align: left;
         flex: 1;
     }
 
-    .speaker-tags, .workshop-tags {
+    .speaker-tags {
         justify-content: flex-start;
     }
 
