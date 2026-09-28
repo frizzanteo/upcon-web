@@ -108,18 +108,25 @@
             gap: 40px;
         }
 
+        .event-title-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
         .day-large {
-            font-size: 2.2rem;
+            font-size: 1.9rem;
             font-weight: 700;
             line-height: 1;
-            margin-bottom: 8px;
+            margin: 0;
             text-transform: uppercase;
         }
 
         .section-title {
             font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 18px;
+            font-size: 1.35rem;
+            line-height: 1.2;
+            margin: 0;
             text-transform: uppercase;
         }
 
@@ -278,7 +285,7 @@
             }
 
             .section-title {
-                font-size: 0.95rem;
+                font-size: 1.15rem;
             }
 
             /* Image column: show full image on mobile, no crop */
