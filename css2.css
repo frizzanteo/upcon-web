@@ -1,0 +1,303 @@
+        :root {
+            --bg: #fdfdfb;
+            --text: #111;
+            --font-mono: 'Space Mono', monospace;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-mono);
+            margin: 0;
+            padding: 40px;
+            box-sizing: border-box;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 50px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .header-logo {
+            flex-shrink: 0;
+        }
+
+        .header-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+
+        .header-center {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+
+        .header-spacer {
+            flex: 1;
+        }
+
+        .logo-img {
+            max-width: 300px;
+            filter: brightness(0);
+        }
+
+        .title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .date-header {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        .location {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        .pin-icon {
+            width: 24px;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            gap: 50px;
+        }
+
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .image-column img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-column {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .day-large {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+
+        .event-block {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .event-block p {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .schedule-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .schedule-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .time {
+            font-weight: 700;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .desc {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .author {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .footer-logos {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .footer-logos img {
+            max-height: 50px;
+        }
+
+        .archive-section {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--text);
+        }
+
+        .archive-nav {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            display: flex;
+            gap: 15px;
+        }
+
+        .archive-nav span {
+            font-weight: 700;
+        }
+
+        .archive-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .archive-nav a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--text);
+        }
+
+        .archive-nav a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 900px) {
+
+            body {
+                padding: 20px;
+            }
+
+            /* Header: logo+title left, location right, side by side */
+            .header {
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 16px;
+                margin-bottom: 30px;
+                padding-bottom: 16px;
+            }
+
+            .header-logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .logo-img {
+                max-width: 160px;
+            }
+
+            .header-center {
+                align-items: flex-start;
+            }
+
+            .title {
+                font-size: 1.1rem;
+                letter-spacing: 1px;
+            }
+
+            .date-header {
+                font-size: 0.85rem;
+            }
+
+            .header-spacer {
+                display: none;
+            }
+
+            .location {
+                font-size: 0.8rem;
+                gap: 8px;
+            }
+
+            .pin-icon {
+                width: 16px;
+            }
+
+            /* Stack grid columns vertically */
+            .main-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            /* Scale down event headings on mobile */
+            .day-large {
+                font-size: 1.6rem;
+            }
+
+            .section-title {
+                font-size: 0.95rem;
+            }
+
+            /* Image column: show full image on mobile, no crop */
+            .image-column img {
+                width: 100%;
+                height: auto;
+                max-height: none;
+                object-fit: contain;
+            }
+
+            /* Footer logos side by side on mobile */
+            .footer-logos {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .footer-logos img {
+                max-height: 36px;
+            }
+        }
